@@ -3,9 +3,11 @@ import react from '@vitejs/plugin-react'
 import {resolve} from 'path'
 import typescript from '@rollup/plugin-typescript';
 
+const mode = process.argv[3]?.slice(7)
+
 
 // https://vitejs.dev/config/
-export default defineConfig({
+const viteComponet = defineConfig({
   resolve:{
     alias:{
       "@" : resolve(__dirname,"./src")
@@ -29,3 +31,20 @@ export default defineConfig({
     },
   },
 })
+
+const viteProd = defineConfig({
+  resolve: {
+      alias: {
+          "@": resolve(__dirname, "./src")
+      }
+  },
+  plugins: [react(), typescript()],
+  build: {
+      assetsInlineLimit: 60000,
+      outDir: "prod"
+  }
+});
+
+const exportVite = mode==='prod'?viteProd:viteComponet
+
+export default exportVite

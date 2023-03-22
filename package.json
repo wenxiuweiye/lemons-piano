@@ -1,22 +1,25 @@
 {
   "name": "lemons-piano",
-  "private": "false",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "module": "./dist/lemons-piano.es.js",
   "author": "wenxiuweiye",
   "types": "./dist/types/components/piano/index.d.ts",
   "files": [
     "dist"
   ],
+  "license": "MIT",
+  "keywords": ["react","piano"],
   "repository": {
     "type": "git",
     "url": "https://github.com/wenxiuweiye/lemons-piano"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "dev:test":"vite --mode=test",
+    "build": "tsc -p tsconfig.component.json  && vite build",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "build:prod":"tsc  && vite build --mode=prod"
   },
   "dependencies": {
     "commander": "^10.0.0",

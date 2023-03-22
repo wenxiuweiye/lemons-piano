@@ -1,11 +1,14 @@
 <p align='center'>
-    <img src="./src/assets/pianoLogo.png"></img>
+    <img src="src/assets/pianoLogo.png"></img>
     <h1 align='center'>lemons-piano</h1>
 </p>
 
+## 📦安装
+```bash
+npm install lemons-piano
+```
 
 ## 🔨用法
-
 ``` tsx
 //引入组件
 import Piano from 'lemons-piano'
