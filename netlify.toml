@@ -1,3 +1,6 @@
+[build]
+  base = "project/"
+  
 [[redirects]]
   from = "/*"
   to = "/"
