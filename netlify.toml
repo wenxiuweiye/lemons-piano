@@ -1,6 +1,6 @@
 [build]
-  base = "project/"
-  
+  base = "https://lemons-piano.netlify.app/"
+
 [[redirects]]
   from = "/*"
   to = "/"
