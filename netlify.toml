@@ -3,4 +3,3 @@
   to = "/"
   status = 301
   force = false
-  conditions = {Language = ["en","es"], Country = ["US"]}
