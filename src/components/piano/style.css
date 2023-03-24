@@ -1,91 +1,102 @@
-.piano-wapper{
-    --width:1080px;
 
+
+.piano-wapper {
+    --width: 1080px;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
+    transition: all .5s;
+    transform: rotate(90deg);
     background: gray;
     width: var(--width);
-    height: 40vh;
+    height: 100vw;
     display: flex;
     flex-direction: column;
 }
-.piano-top{
+
+.piano-top {
     background-color: black;
     width: var(--width);
     height: 25%;
 }
-.piano-bottom{
+
+.piano-bottom {
     width: var(--width);
     height: 75%;
     display: flex;
 }
-.piano-group{
+
+.piano-group {
     width: 216px;
     height: 100%;
     display: flex;
     justify-content: center;
     position: relative;
 }
-.piano-white-group{
+
+.piano-white-group {
     width: 216px;
     height: 100%;
     display: flex;
 }
 
-.piano-white-group > div{
+.piano-white-group>div {
     color: black;
-    background-color:rgb(255,254,248);
+    background-color: rgb(255, 254, 248);
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
 }
-.piano-black-group{
+
+.piano-black-group {
     width: 216px;
     height: 80%;
     display: flex;
     position: absolute;
 }
-.piano-black-group .piano-black-group-left{
+
+.piano-black-group .piano-black-group-left {
     margin-left: 5%;
     width: 30%;
     height: 100%;
     display: flex;
 
 }
-.piano-black-group .piano-black-group-left > div{
+
+.piano-black-group .piano-black-group-left>div {
     background-color: rgb(34, 32, 32);
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
 }
 
-.piano-black-group .piano-black-group-right{
+.piano-black-group .piano-black-group-right {
     margin-left: 13%;
     width: 50%;
     height: 100%;
     display: flex;
 
 }
-.piano-black-group .piano-black-group-right > div{
+
+.piano-black-group .piano-black-group-right>div {
     background-color: rgb(34, 32, 32);
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
 }
-.keySize{
+
+.keySize {
     width: 30px;
-
-
-
     height: 100%;
     cursor: pointer;
 
 }
-.keySize:hover{
-    box-shadow: inset 1px 1px  sandybrown ,
-                inset -1px -1px sandybrown
 
+.keySize:hover {
+    box-shadow: inset 1px 1px sandybrown,
+        inset -1px -1px sandybrown
 }
 
-.blackKeyStyle{
+.blackKeyStyle {
     border-top-color: rgb(80, 79, 79);
     border-left-color: grey;
     border-right-color: gray;
@@ -97,7 +108,8 @@
     border-left-width: 2px;
     border-radius: 2px;
 }
-.whiteKeyStyle{
+
+.whiteKeyStyle {
     border-top-color: rgb(80, 79, 79);
     border-left-color: grey;
     border-right-color: gray;
@@ -108,4 +120,19 @@
     border-bottom-width: 7px;
     border-left-width: 2px;
     border-radius: 1px;
+}
+
+@media (min-width: 1024px) {
+    .piano-wapper {
+        --width: 1080px;
+    
+        margin-top: 0;
+        margin-bottom: 0;
+        transform: rotate(0deg);
+        background: gray;
+        width: var(--width);
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+    }
 }

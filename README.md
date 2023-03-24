@@ -19,7 +19,7 @@ function App() {
   
   return (
     <div className="App">
-      <!--直接使用组件即可-->
+      {<!--直接使用组件即可-->}
       <Piano></Piano>
     </div>
   )

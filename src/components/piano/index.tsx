@@ -1,10 +1,13 @@
 import pianoArray from './pianoArray.json'
 import './style.css'
 import PianoGroup from './PianoGroup'
-import {  useRef } from 'react'
+import {  useRef,CSSProperties } from 'react'
 
+type PianoStyle = {
+    style?:CSSProperties
+}
 
-export default function Piano() {
+export default function Piano({style}:PianoStyle) {
 
     const isMouseUse = useRef<boolean>(false)
     
@@ -12,7 +15,7 @@ export default function Piano() {
     const { C2GroupWhiteKey, C3GroupWhiteKey, C4GroupWhiteKey, C5GroupWhiteKey, C6GroupWhiteKey } = whiteKey
     const { C2GroupBlackKey,C3GroupBlackKey,C4GroupBlackKey,C5GroupBlackKey,C6GroupBlackKey } = blackKey
     return (
-        <div className='piano-wapper'>
+        <div className='piano-wapper' style={style?style:undefined}>
             <div className='piano-top keyStyle'></div>
             
             <div className="piano-bottom">
